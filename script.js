@@ -25,11 +25,10 @@ function cardPrintAndSearching(cards) {
          <img src="${cards[a].image}"height="250px" class="card-img-top" alt="card-image" >
          <div class="card-body">
         <p class="card-text">${cards[a].title}</p>
-         <a href="#" class="btn btn-dark" style="width:50%">Add to cart</a>
+         <a href="#" class="btn btn-dark" onclick="addToCart(${cards[a].id})"style="width:50%">Add to cart</a>
         <a href="./detail.html?id=${cards[a].id}" class="btn btn-dark  style="width:50%">View details</a>
         </div>
         </div>
         </div>`
-        console.log(cards)
     }
 }

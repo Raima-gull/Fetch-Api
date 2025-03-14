@@ -5,7 +5,7 @@ let img=document.getElementById("img")
 let title=document.getElementById("title")
 let desc=document.getElementById("desc")
 let price=document.getElementById("price")
-let btn=document.getElementById("btn")
+let AddToCart=document.getElementById("AddToCart")
 let category=document.getElementById("category")
 // console.log(paramValue)
 
@@ -24,7 +24,10 @@ fetch(`https://fakestoreapi.com/products/${paramValue}`)
     price.innerHTML=`Price: Rs ${res.price}`
     category.innerHTML=`Category:  ${res.category}`
     img.src=res.image
-    btn.innerHTML="Add To cart"
+        AddToCart.innerHTML="Add To cart"
+    AddToCart.addEventListener('click',()=>{
+        addToCart(res.id)
+    })
 })
 .catch((err)=>{
  alert("This product id is not available");

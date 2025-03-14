@@ -11,13 +11,23 @@
     }
     .card{
         margin-bottom: 2rem;
+        background: #000;  
+    box-shadow: 20px 20px 10px rgba(0,0,0,0.2);
+ transition: transform 0.5s ease;
+    }
+    .card:hover{
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.541);
+        transform: scale(1.1);
     }
     .card-text {
     white-space: nowrap;      
     overflow: hidden;         
     text-overflow: ellipsis;
+    color: #fff;
 }
-
+input{
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.2);
+}
 </style>
 </head>
 <body>
@@ -25,7 +35,7 @@
         <input class="form-control " id="product-search" type="text" placeholder="Search your Products" style="margin: 20px 0px;border: 1px solid #000; ">
         <div class="row" id="products">
         </div>
-
+        <script src="./addtocart.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
